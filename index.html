@@ -54,6 +54,7 @@ h1{margin:0;font:600 clamp(38px,5vw,60px)/1.04 var(--serif);letter-spacing:-.01e
 .verify ol{margin:0 0 14px;padding:0;list-style:none;counter-reset:s;display:grid;gap:10px}
 .verify li{counter-increment:s;position:relative;padding-left:34px;font-size:15px;line-height:1.5}
 .verify li::before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--chip-bg);color:var(--chip-ink);font-size:13px;font-weight:700;display:grid;place-items:center}
+.verify li a{display:inline-block;padding:7px 0;margin:-7px 0}
 .verify .note{margin:0;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--muted)}
 
 /* ---------- summary strip ---------- */
@@ -110,7 +111,7 @@ h1{margin:0;font:600 clamp(38px,5vw,60px)/1.04 var(--serif);letter-spacing:-.01e
 .ver{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:8px;padding:9px 10px 9px 12px;background:var(--field);border:1px solid var(--line);border-radius:10px}
 .ver .lbl{grid-column:1/-1;margin-bottom:2px}
 .ver code{font:600 14px/1.4 var(--mono);letter-spacing:.01em;white-space:nowrap;user-select:all}
-.cp{display:inline-flex;align-items:center;justify-content:center;min-width:58px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;font-size:12.5px;font-weight:700;white-space:nowrap}
+.cp{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:32px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;font-size:12.5px;font-weight:700;white-space:nowrap}
 .cp:hover{border-color:var(--accent);color:var(--accent)}
 .cp.done{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .actions{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
@@ -203,7 +204,7 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
 </svg>
 
 <div class="wrap" style="padding-top:10px">
-<nav class="home-link" style="font:14px/1.4 system-ui,-apple-system,sans-serif;margin:0 0 12px"><a href="https://nschaumann.com/" style="color:#1F4E79;text-decoration:none">← Nathan Schaumann · all projects</a></nav>
+<nav class="home-link" style="font:14px/1.4 system-ui,-apple-system,sans-serif;margin:0 0 4px"><a href="https://nschaumann.com/" style="display:inline-block;padding:8px 0;color:#1F4E79;text-decoration:none">← Nathan Schaumann · all projects</a></nav>
 </div>
 
 <header class="hero">
