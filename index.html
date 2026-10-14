@@ -41,57 +41,31 @@ button{font:inherit;color:inherit}
 .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
 
 /* ---------- hero ---------- */
-.hero{position:relative;color:#fff;background:linear-gradient(135deg,var(--hero-a),var(--hero-b));padding:56px 0 96px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 88% 8%,rgba(255,255,255,.045) 0 6deg,transparent 6deg 12deg);-webkit-mask-image:radial-gradient(circle at 88% 8%,#000,transparent 62%);mask-image:radial-gradient(circle at 88% 8%,#000,transparent 62%);pointer-events:none}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,#7a3a7f,#a04a8f)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center}
-.eyebrow{margin:0 0 14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#b9c6e6;white-space:nowrap}
-h1{margin:0;font:600 clamp(38px,5vw,60px)/1.04 var(--serif);letter-spacing:-.01em}
-.lede{margin:18px 0 0;max-width:34em;font-size:18px;line-height:1.55;color:#d4dcf0}
-.verify{background:var(--surface);color:var(--ink);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-lg)}
-.verify h2{display:flex;align-items:center;gap:10px;margin:0 0 12px;font:600 19px/1.2 var(--serif)}
-.verify h2 .ico{width:22px;height:22px;color:var(--accent)}
-.verify ol{margin:0 0 14px;padding:0;list-style:none;counter-reset:s;display:grid;gap:10px}
-.verify li{counter-increment:s;position:relative;padding-left:34px;font-size:15px;line-height:1.5}
-.verify li::before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--chip-bg);color:var(--chip-ink);font-size:13px;font-weight:700;display:grid;place-items:center}
-.verify li a{display:inline-block;padding:7px 0;margin:-7px 0}
-.verify .note{margin:0;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--muted)}
-
-/* ---------- summary strip ---------- */
-.stats{position:relative;margin:-52px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg)}
-.stat{padding:20px 26px;min-width:0}
-.stat+.stat{border-left:1px solid var(--line)}
-.stat b{display:block;font:600 34px/1.1 var(--serif);letter-spacing:-.01em;white-space:nowrap}
-.stat span{display:block;margin-top:6px;font-size:14px;color:var(--muted);white-space:nowrap}
+.hero{color:#fff;background:var(--hero-a);padding:40px 0 44px}
+.eyebrow{margin:0 0 10px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#b9c6e6;white-space:nowrap}
+h1{margin:0;font:600 clamp(34px,4.4vw,52px)/1.05 var(--serif);letter-spacing:-.01em}
+.lede{margin:14px 0 0;max-width:40em;font-size:17px;line-height:1.55;color:#d4dcf0}
+.lede a{color:#fff;text-underline-offset:3px}
 
 /* ---------- gallery ---------- */
-.gallery{padding:48px 0 32px}
-.gh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 24px;margin-bottom:16px}
-.gh h2{margin:0;font:600 28px/1.15 var(--serif)}
-.gh p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
-.sort{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
-.seg{display:inline-flex;padding:3px;background:var(--surface);border:1px solid var(--line);border-radius:999px}
-.seg label{position:relative;cursor:pointer}
-.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.seg span{display:block;padding:6px 14px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--muted);white-space:nowrap}
-.seg input:checked+span{background:var(--accent);color:var(--accent-ink)}
-.seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;font-size:14px;font-weight:600;white-space:nowrap}
-.chip small{font-size:12.5px;font-weight:600;color:var(--muted)}
+.gallery{padding:28px 0 24px}
+.gh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:6px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;font-size:14px;font-weight:600;white-space:nowrap}
 .chip:hover{border-color:var(--accent)}
 .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.chip[aria-pressed="true"] small{color:inherit;opacity:.8}
+.sort{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+.sort select{font:600 13.5px var(--sans);color:var(--ink);padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);cursor:pointer}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:20px}
-.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
 .card[hidden]{display:none}
-.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.card:hover{box-shadow:var(--shadow)}
 .thumb{position:relative;display:block;width:100%;padding:12px 12px 0;border:0;background:var(--field);cursor:zoom-in}
 .thumb img{display:block;width:100%;height:auto;aspect-ratio:2200/1700;border:1px solid var(--line);border-radius:4px;background:#fff;margin-bottom:12px;box-shadow:0 2px 10px -4px rgba(19,28,51,.25)}
 .thumb .zoom{position:absolute;right:22px;bottom:22px;display:flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;background:rgba(19,28,51,.86);color:#fff;font-size:12.5px;font-weight:600;white-space:nowrap;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s}
 .thumb:hover .zoom,.thumb:focus-visible .zoom{opacity:1;transform:none}
-.body{display:flex;flex-direction:column;gap:12px;padding:16px 16px 14px;flex:1}
+.body{display:flex;flex-direction:column;gap:10px;padding:14px 16px 16px;flex:1}
 .head{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .head h3{margin:0;font:600 22px/1.15 var(--serif)}
 .skill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 8px;border-radius:999px;background:var(--chip-bg);color:var(--chip-ink);font-size:12.5px;font-weight:700;white-space:nowrap}
@@ -110,6 +84,9 @@ h1{margin:0;font:600 clamp(38px,5vw,60px)/1.04 var(--serif);letter-spacing:-.01e
 .dates dd{margin:1px 0 0;font-size:14px;font-weight:500;white-space:nowrap}
 .ver{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:8px;padding:9px 10px 9px 12px;background:var(--field);border:1px solid var(--line);border-radius:10px}
 .ver .lbl{grid-column:1/-1;margin-bottom:2px}
+.card .ver{grid-template-columns:auto 1fr auto;column-gap:10px;padding:0;background:none;border:0;border-radius:0;margin-top:auto;padding-top:10px;border-top:1px solid var(--line)}
+.card .ver .lbl{grid-column:auto;margin:0}
+.card .ver code{font-size:13.5px;font-weight:500;color:var(--muted)}
 .ver code{font:600 14px/1.4 var(--mono);letter-spacing:.01em;white-space:nowrap;user-select:all}
 .cp{display:inline-flex;align-items:center;justify-content:center;min-width:58px;min-height:32px;padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;font-size:12.5px;font-weight:700;white-space:nowrap}
 .cp:hover{border-color:var(--accent);color:var(--accent)}
@@ -146,32 +123,12 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
 
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
-  .hero .wrap{grid-template-columns:1fr;gap:32px}
-  .hero{padding:44px 0 84px}
   .bar .id{flex-basis:100%}
-}
-@media (max-width:1200px){
-  .stat span{white-space:normal}
-}
-@media (max-width:900px){
-  .stats{grid-template-columns:1fr}
-  .stat{padding:14px 22px;display:flex;align-items:baseline;gap:14px}
-  .stat+.stat{border-left:0;border-top:1px solid var(--line)}
-  .stat span{margin:0}
 }
 @media (max-width:760px){
   .wrap{padding:0 16px}
-  .hero{padding:36px 0 76px}
-  .eyebrow{font-size:12px;letter-spacing:.11em;margin-bottom:10px}
-  .lede{font-size:16.5px}
-  .verify{padding:18px 18px}
-  .stats{margin-top:-44px}
-  .stat{display:block;padding:12px 20px}
-  .stat b{font-size:24px}
-  .stat span{margin-top:2px;font-size:13.5px}
-  .gallery{padding-top:36px}
-  .gh h2{font-size:24px}
-  .sort{width:100%}
+  .hero{padding:32px 0 34px}
+  .lede{font-size:16px}
   .grid{gap:16px}
   dialog[open]{padding:0;align-items:flex-end}
   .panel{border-radius:16px 16px 0 0;width:100%;max-height:100%}
@@ -209,50 +166,31 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
 
 <header class="hero">
   <div class="wrap">
-    <div>
-      <p class="eyebrow">ACTFL proficiency certificates</p>
-      <h1>Nathan Schaumann</h1>
-      <p class="lede">Official ratings in Spanish, Russian, Portuguese, Armenian and French, issued December 2025 to September 2026.</p>
-    </div>
-    <aside class="verify" aria-labelledby="vh">
-      <h2 id="vh"><svg class="ico"><use href="#i-shield"/></svg>How to verify</h2>
-      <ol>
-        <li>Go to <a href="https://www.languagetesting.com/verify" rel="noopener">languagetesting.com/verify</a></li>
-        <li>Enter a verification number from any certificate below. Each card has a Copy button.</li>
-      </ol>
-      <p class="note">Ratings are issued by ACTFL through Language Testing International, its official testing partner.</p>
-    </aside>
+    <p class="eyebrow">ACTFL proficiency certificates</p>
+    <h1>Nathan Schaumann</h1>
+    <p class="lede">12 official ratings in Spanish, Russian, Portuguese, Armenian and French. To verify one, enter its number at <a href="https://www.languagetesting.com/verify" rel="noopener">languagetesting.com/verify</a>.</p>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="stats" aria-label="Summary">
-    <div class="stat"><b>12</b><span>official ratings</span></div>
-    <div class="stat"><b>2 Superior</b><span>Spanish and Russian reading</span></div>
-    <div class="stat"><b>AL to AH</b><span>Spanish listening, Advanced Low to Advanced High</span></div>
-  </section>
 
-  <section class="gallery" aria-labelledby="gh">
+  <section class="gallery" aria-label="Certificates">
     <div class="gh">
-      <div>
-        <h2 id="gh">Certificates</h2>
-        <p>Select any certificate to enlarge it, or open the original PDF.</p>
+      <div class="chips" role="group" aria-label="Filter by language">
+      <button class="chip" type="button" data-lang="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-lang="Spanish" aria-pressed="false">Spanish</button>
+      <button class="chip" type="button" data-lang="Russian" aria-pressed="false">Russian</button>
+      <button class="chip" type="button" data-lang="Portuguese" aria-pressed="false">Portuguese</button>
+      <button class="chip" type="button" data-lang="Armenian" aria-pressed="false">Armenian</button>
+      <button class="chip" type="button" data-lang="French" aria-pressed="false">French</button>
       </div>
-      <div class="sort">Sort
-        <div class="seg" role="radiogroup" aria-label="Sort certificates">
-          <label><input type="radio" name="sort" value="strength" checked><span>Strongest</span></label>
-          <label><input type="radio" name="sort" value="newest"><span>Newest</span></label>
-          <label><input type="radio" name="sort" value="language"><span>Language</span></label>
-        </div>
-      </div>
-    </div>
-    <div class="chips" role="group" aria-label="Filter by language">
-      <button class="chip" type="button" data-lang="all" aria-pressed="true">All <small>12</small></button>
-      <button class="chip" type="button" data-lang="Spanish" aria-pressed="false">Spanish <small>4</small></button>
-      <button class="chip" type="button" data-lang="Russian" aria-pressed="false">Russian <small>3</small></button>
-      <button class="chip" type="button" data-lang="Portuguese" aria-pressed="false">Portuguese <small>3</small></button>
-      <button class="chip" type="button" data-lang="Armenian" aria-pressed="false">Armenian <small>1</small></button>
-      <button class="chip" type="button" data-lang="French" aria-pressed="false">French <small>1</small></button>
+      <label class="sort">Sort
+        <select id="sort" aria-label="Sort certificates">
+          <option value="strength">Strongest</option>
+          <option value="newest">Newest</option>
+          <option value="language">Language</option>
+        </select>
+      </label>
     </div>
     <div class="grid" id="grid">
       <article class="card" id="spanish-reading-superior-2026-02-09" data-lang="Spanish" data-skill="Reading" data-level="10" data-rating="Superior" data-tested="2026-02-09" data-tested-label="9 Feb 2026" data-expires-label="9 Feb 2028" data-ver="10356164-B3CC31" data-kind="Reading Proficiency Test (RPT)" data-alt="ACTFL reading certificate for Spanish, rated Superior" data-thumb="certificates/thumb/spanish-reading-superior-2026-02-09.webp" data-img="certificates/img/spanish-reading-superior-2026-02-09.webp" data-pdf="certificates/spanish-reading-superior-2026-02-09.pdf">
@@ -263,10 +201,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Spanish</h3><span class="skill reading"><svg class="ico"><use href="#i-reading"/></svg>Reading</span></div>
           <div class="lvl"><p class="rating">Superior</p><div class="scale" role="img" aria-label="Level 10 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>9 Feb 2026</dd></div><div><dt>Expires</dt><dd>9 Feb 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10356164-B3CC31</code><button class="cp" type="button" data-copy="10356164-B3CC31" aria-label="Copy verification number 10356164-B3CC31">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10356164-B3CC31</code><button class="cp" type="button" data-copy="10356164-B3CC31" aria-label="Copy verification number 10356164-B3CC31">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/spanish-reading-superior-2026-02-09.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="russian-reading-superior-2026-01-26" data-lang="Russian" data-skill="Reading" data-level="10" data-rating="Superior" data-tested="2026-01-26" data-tested-label="26 Jan 2026" data-expires-label="26 Jan 2028" data-ver="10252277-073F05" data-kind="Reading Proficiency Test (RPT)" data-alt="ACTFL reading certificate for Russian, rated Superior" data-thumb="certificates/thumb/russian-reading-superior-2026-01-26.webp" data-img="certificates/img/russian-reading-superior-2026-01-26.webp" data-pdf="certificates/russian-reading-superior-2026-01-26.pdf">
         <button class="thumb" type="button" data-open aria-label="View Russian reading certificate, Superior">
@@ -276,10 +212,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Russian</h3><span class="skill reading"><svg class="ico"><use href="#i-reading"/></svg>Reading</span></div>
           <div class="lvl"><p class="rating">Superior</p><div class="scale" role="img" aria-label="Level 10 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>26 Jan 2026</dd></div><div><dt>Expires</dt><dd>26 Jan 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10252277-073F05</code><button class="cp" type="button" data-copy="10252277-073F05" aria-label="Copy verification number 10252277-073F05">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10252277-073F05</code><button class="cp" type="button" data-copy="10252277-073F05" aria-label="Copy verification number 10252277-073F05">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/russian-reading-superior-2026-01-26.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="spanish-listening-advanced-high-2026-08-11" data-lang="Spanish" data-skill="Listening" data-level="9" data-rating="Advanced High" data-tested="2026-08-11" data-tested-label="11 Aug 2026" data-expires-label="11 Aug 2028" data-ver="11123185-788DDB" data-kind="Listening Proficiency Test (LPT)" data-alt="ACTFL listening certificate for Spanish, rated Advanced High" data-thumb="certificates/thumb/spanish-listening-advanced-high-2026-08-11.webp" data-img="certificates/img/spanish-listening-advanced-high-2026-08-11.webp" data-pdf="certificates/spanish-listening-advanced-high-2026-08-11.pdf">
         <button class="thumb" type="button" data-open aria-label="View Spanish listening certificate, Advanced High">
@@ -289,10 +223,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Spanish</h3><span class="skill listening"><svg class="ico"><use href="#i-listening"/></svg>Listening</span></div>
           <div class="lvl"><p class="rating">Advanced High</p><div class="scale" role="img" aria-label="Level 9 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>11 Aug 2026</dd></div><div><dt>Expires</dt><dd>11 Aug 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>11123185-788DDB</code><button class="cp" type="button" data-copy="11123185-788DDB" aria-label="Copy verification number 11123185-788DDB">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>11123185-788DDB</code><button class="cp" type="button" data-copy="11123185-788DDB" aria-label="Copy verification number 11123185-788DDB">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/spanish-listening-advanced-high-2026-08-11.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="spanish-speaking-advanced-low-2026-08-28" data-lang="Spanish" data-skill="Speaking" data-level="7" data-rating="Advanced Low" data-tested="2026-08-28" data-tested-label="28 Aug 2026" data-expires-label="30 Aug 2028" data-ver="11130800-52F34C" data-kind="Oral Proficiency Interview (OPIc)" data-alt="ACTFL speaking certificate for Spanish, rated Advanced Low" data-thumb="certificates/thumb/spanish-speaking-advanced-low-2026-08-28.webp" data-img="certificates/img/spanish-speaking-advanced-low-2026-08-28.webp" data-pdf="certificates/spanish-speaking-advanced-low-2026-08-28.pdf">
         <button class="thumb" type="button" data-open aria-label="View Spanish speaking certificate, Advanced Low">
@@ -302,10 +234,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Spanish</h3><span class="skill speaking"><svg class="ico"><use href="#i-speaking"/></svg>Speaking</span></div>
           <div class="lvl"><p class="rating">Advanced Low</p><div class="scale" role="img" aria-label="Level 7 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>28 Aug 2026</dd></div><div><dt>Expires</dt><dd>30 Aug 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>11130800-52F34C</code><button class="cp" type="button" data-copy="11130800-52F34C" aria-label="Copy verification number 11130800-52F34C">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>11130800-52F34C</code><button class="cp" type="button" data-copy="11130800-52F34C" aria-label="Copy verification number 11130800-52F34C">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/spanish-speaking-advanced-low-2026-08-28.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="portuguese-reading-advanced-low-2026-08-14" data-lang="Portuguese" data-skill="Reading" data-level="7" data-rating="Advanced Low" data-tested="2026-08-14" data-tested-label="14 Aug 2026" data-expires-label="14 Aug 2028" data-ver="11125228-A62B2B" data-kind="Reading Proficiency Test (RPT)" data-alt="ACTFL reading certificate for Portuguese, rated Advanced Low" data-thumb="certificates/thumb/portuguese-reading-advanced-low-2026-08-14.webp" data-img="certificates/img/portuguese-reading-advanced-low-2026-08-14.webp" data-pdf="certificates/portuguese-reading-advanced-low-2026-08-14.pdf">
         <button class="thumb" type="button" data-open aria-label="View Portuguese reading certificate, Advanced Low">
@@ -315,10 +245,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Portuguese</h3><span class="skill reading"><svg class="ico"><use href="#i-reading"/></svg>Reading</span></div>
           <div class="lvl"><p class="rating">Advanced Low</p><div class="scale" role="img" aria-label="Level 7 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>14 Aug 2026</dd></div><div><dt>Expires</dt><dd>14 Aug 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>11125228-A62B2B</code><button class="cp" type="button" data-copy="11125228-A62B2B" aria-label="Copy verification number 11125228-A62B2B">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>11125228-A62B2B</code><button class="cp" type="button" data-copy="11125228-A62B2B" aria-label="Copy verification number 11125228-A62B2B">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/portuguese-reading-advanced-low-2026-08-14.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="portuguese-listening-advanced-low-2026-04-24" data-lang="Portuguese" data-skill="Listening" data-level="7" data-rating="Advanced Low" data-tested="2026-04-24" data-tested-label="24 Apr 2026" data-expires-label="24 Apr 2028" data-ver="10909256-4BDCA4" data-kind="Listening Proficiency Test (LPT)" data-alt="ACTFL listening certificate for Portuguese, rated Advanced Low" data-thumb="certificates/thumb/portuguese-listening-advanced-low-2026-04-24.webp" data-img="certificates/img/portuguese-listening-advanced-low-2026-04-24.webp" data-pdf="certificates/portuguese-listening-advanced-low-2026-04-24.pdf">
         <button class="thumb" type="button" data-open aria-label="View Portuguese listening certificate, Advanced Low">
@@ -328,10 +256,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Portuguese</h3><span class="skill listening"><svg class="ico"><use href="#i-listening"/></svg>Listening</span></div>
           <div class="lvl"><p class="rating">Advanced Low</p><div class="scale" role="img" aria-label="Level 7 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>24 Apr 2026</dd></div><div><dt>Expires</dt><dd>24 Apr 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10909256-4BDCA4</code><button class="cp" type="button" data-copy="10909256-4BDCA4" aria-label="Copy verification number 10909256-4BDCA4">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10909256-4BDCA4</code><button class="cp" type="button" data-copy="10909256-4BDCA4" aria-label="Copy verification number 10909256-4BDCA4">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/portuguese-listening-advanced-low-2026-04-24.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="portuguese-reading-advanced-low-2026-04-20" data-lang="Portuguese" data-skill="Reading" data-level="7" data-rating="Advanced Low" data-tested="2026-04-20" data-tested-label="20 Apr 2026" data-expires-label="20 Apr 2028" data-ver="10815804-134065" data-kind="Reading Proficiency Test (RPT)" data-alt="ACTFL reading certificate for Portuguese, rated Advanced Low" data-thumb="certificates/thumb/portuguese-reading-advanced-low-2026-04-20.webp" data-img="certificates/img/portuguese-reading-advanced-low-2026-04-20.webp" data-pdf="certificates/portuguese-reading-advanced-low-2026-04-20.pdf">
         <button class="thumb" type="button" data-open aria-label="View Portuguese reading certificate, Advanced Low">
@@ -341,10 +267,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Portuguese</h3><span class="skill reading"><svg class="ico"><use href="#i-reading"/></svg>Reading</span></div>
           <div class="lvl"><p class="rating">Advanced Low</p><div class="scale" role="img" aria-label="Level 7 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>20 Apr 2026</dd></div><div><dt>Expires</dt><dd>20 Apr 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10815804-134065</code><button class="cp" type="button" data-copy="10815804-134065" aria-label="Copy verification number 10815804-134065">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10815804-134065</code><button class="cp" type="button" data-copy="10815804-134065" aria-label="Copy verification number 10815804-134065">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/portuguese-reading-advanced-low-2026-04-20.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="armenian-speaking-advanced-low-2025-12-15" data-lang="Armenian" data-skill="Speaking" data-level="7" data-rating="Advanced Low" data-tested="2025-12-15" data-tested-label="15 Dec 2025" data-expires-label="18 Dec 2027" data-ver="10218095-84C7AC" data-kind="Oral Proficiency Interview (OPI)" data-alt="ACTFL speaking certificate for Armenian, rated Advanced Low" data-thumb="certificates/thumb/armenian-speaking-advanced-low-2025-12-15.webp" data-img="certificates/img/armenian-speaking-advanced-low-2025-12-15.webp" data-pdf="certificates/armenian-speaking-advanced-low-2025-12-15.pdf">
         <button class="thumb" type="button" data-open aria-label="View Armenian speaking certificate, Advanced Low">
@@ -354,10 +278,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Armenian</h3><span class="skill speaking"><svg class="ico"><use href="#i-speaking"/></svg>Speaking</span></div>
           <div class="lvl"><p class="rating">Advanced Low</p><div class="scale" role="img" aria-label="Level 7 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>15 Dec 2025</dd></div><div><dt>Expires</dt><dd>18 Dec 2027</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10218095-84C7AC</code><button class="cp" type="button" data-copy="10218095-84C7AC" aria-label="Copy verification number 10218095-84C7AC">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10218095-84C7AC</code><button class="cp" type="button" data-copy="10218095-84C7AC" aria-label="Copy verification number 10218095-84C7AC">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/armenian-speaking-advanced-low-2025-12-15.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="spanish-listening-advanced-low-2025-12-02" data-lang="Spanish" data-skill="Listening" data-level="7" data-rating="Advanced Low" data-tested="2025-12-02" data-tested-label="2 Dec 2025" data-expires-label="2 Dec 2027" data-ver="10204928-C87512" data-kind="Listening Proficiency Test (LPT)" data-alt="ACTFL listening certificate for Spanish, rated Advanced Low" data-thumb="certificates/thumb/spanish-listening-advanced-low-2025-12-02.webp" data-img="certificates/img/spanish-listening-advanced-low-2025-12-02.webp" data-pdf="certificates/spanish-listening-advanced-low-2025-12-02.pdf">
         <button class="thumb" type="button" data-open aria-label="View Spanish listening certificate, Advanced Low">
@@ -367,10 +289,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Spanish</h3><span class="skill listening"><svg class="ico"><use href="#i-listening"/></svg>Listening</span></div>
           <div class="lvl"><p class="rating">Advanced Low</p><div class="scale" role="img" aria-label="Level 7 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>2 Dec 2025</dd></div><div><dt>Expires</dt><dd>2 Dec 2027</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10204928-C87512</code><button class="cp" type="button" data-copy="10204928-C87512" aria-label="Copy verification number 10204928-C87512">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10204928-C87512</code><button class="cp" type="button" data-copy="10204928-C87512" aria-label="Copy verification number 10204928-C87512">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/spanish-listening-advanced-low-2025-12-02.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="russian-listening-intermediate-mid-2026-05-29" data-lang="Russian" data-skill="Listening" data-level="5" data-rating="Intermediate Mid" data-tested="2026-05-29" data-tested-label="29 May 2026" data-expires-label="29 May 2028" data-ver="10422861-92FB3F" data-kind="Listening Proficiency Test (LPT)" data-alt="ACTFL listening certificate for Russian, rated Intermediate Mid" data-thumb="certificates/thumb/russian-listening-intermediate-mid-2026-05-29.webp" data-img="certificates/img/russian-listening-intermediate-mid-2026-05-29.webp" data-pdf="certificates/russian-listening-intermediate-mid-2026-05-29.pdf">
         <button class="thumb" type="button" data-open aria-label="View Russian listening certificate, Intermediate Mid">
@@ -380,10 +300,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Russian</h3><span class="skill listening"><svg class="ico"><use href="#i-listening"/></svg>Listening</span></div>
           <div class="lvl"><p class="rating">Intermediate Mid</p><div class="scale" role="img" aria-label="Level 5 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i class="on"></i><i></i><i class="g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>29 May 2026</dd></div><div><dt>Expires</dt><dd>29 May 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10422861-92FB3F</code><button class="cp" type="button" data-copy="10422861-92FB3F" aria-label="Copy verification number 10422861-92FB3F">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10422861-92FB3F</code><button class="cp" type="button" data-copy="10422861-92FB3F" aria-label="Copy verification number 10422861-92FB3F">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/russian-listening-intermediate-mid-2026-05-29.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="russian-listening-intermediate-low-2026-02-16" data-lang="Russian" data-skill="Listening" data-level="4" data-rating="Intermediate Low" data-tested="2026-02-16" data-tested-label="16 Feb 2026" data-expires-label="16 Feb 2028" data-ver="10404688-8B2CE8" data-kind="Listening Proficiency Test (LPT)" data-alt="ACTFL listening certificate for Russian, rated Intermediate Low" data-thumb="certificates/thumb/russian-listening-intermediate-low-2026-02-16.webp" data-img="certificates/img/russian-listening-intermediate-low-2026-02-16.webp" data-pdf="certificates/russian-listening-intermediate-low-2026-02-16.pdf">
         <button class="thumb" type="button" data-open aria-label="View Russian listening certificate, Intermediate Low">
@@ -393,10 +311,8 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>Russian</h3><span class="skill listening"><svg class="ico"><use href="#i-listening"/></svg>Listening</span></div>
           <div class="lvl"><p class="rating">Intermediate Low</p><div class="scale" role="img" aria-label="Level 4 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on g"></i><i></i><i></i><i class="g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>16 Feb 2026</dd></div><div><dt>Expires</dt><dd>16 Feb 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>10404688-8B2CE8</code><button class="cp" type="button" data-copy="10404688-8B2CE8" aria-label="Copy verification number 10404688-8B2CE8">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>10404688-8B2CE8</code><button class="cp" type="button" data-copy="10404688-8B2CE8" aria-label="Copy verification number 10404688-8B2CE8">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/russian-listening-intermediate-low-2026-02-16.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
       <article class="card" id="french-reading-novice-high-2026-09-10" data-lang="French" data-skill="Reading" data-level="3" data-rating="Novice High" data-tested="2026-09-10" data-tested-label="10 Sep 2026" data-expires-label="10 Sep 2028" data-ver="11130813-F0F2A9" data-kind="Reading Proficiency Test (RPT)" data-alt="ACTFL reading certificate for French, rated Novice High" data-thumb="certificates/thumb/french-reading-novice-high-2026-09-10.webp" data-img="certificates/img/french-reading-novice-high-2026-09-10.webp" data-pdf="certificates/french-reading-novice-high-2026-09-10.pdf">
         <button class="thumb" type="button" data-open aria-label="View French reading certificate, Novice High">
@@ -406,18 +322,15 @@ dialog::backdrop{background:rgba(7,10,18,.8);-webkit-backdrop-filter:blur(6px);b
         <div class="body">
           <div class="head"><h3>French</h3><span class="skill reading"><svg class="ico"><use href="#i-reading"/></svg>Reading</span></div>
           <div class="lvl"><p class="rating">Novice High</p><div class="scale" role="img" aria-label="Level 3 of 10 on the ACTFL scale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="g"></i><i></i><i></i><i class="g"></i><i></i><i></i><i class="g"></i></div></div>
-          <dl class="dates"><div><dt>Tested</dt><dd>10 Sep 2026</dd></div><div><dt>Expires</dt><dd>10 Sep 2028</dd></div></dl>
-          <div class="ver"><span class="lbl">Verification number</span><code>11130813-F0F2A9</code><button class="cp" type="button" data-copy="11130813-F0F2A9" aria-label="Copy verification number 11130813-F0F2A9">Copy</button></div>
+          <div class="ver"><span class="lbl">Verify</span><code>11130813-F0F2A9</code><button class="cp" type="button" data-copy="11130813-F0F2A9" aria-label="Copy verification number 11130813-F0F2A9">Copy</button></div>
         </div>
-        <div class="actions"><button type="button" data-open><svg class="ico"><use href="#i-expand"/></svg>View</button><a href="certificates/french-reading-novice-high-2026-09-10.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-file"/></svg>Open PDF</a></div>
       </article>
     </div>
     <p class="sr" id="live" aria-live="polite"></p>
   </section>
 
   <footer class="foot">
-    <p>Test dates and expiry dates are as printed on each certificate. Each certificate is valid for two years from issue.</p>
-    <p>The bar on each card shows where the rating sits on the ACTFL scale, from Novice Low to Superior.</p>
+    <p>Issued by ACTFL through Language Testing International. Select a certificate for its dates and the original PDF.</p>
   </footer>
 </main>
 
@@ -463,7 +376,7 @@ function render(){
   live.textContent='Showing '+n+' of '+cards.length+' certificates';
 }
 chips.forEach(function(b){b.addEventListener('click',function(){state.lang=b.dataset.lang;render();});});
-[].forEach.call(document.querySelectorAll('input[name=sort]'),function(r){r.addEventListener('change',function(){if(r.checked){state.sort=r.value;render();}});});
+document.getElementById('sort').addEventListener('change',function(e){state.sort=e.target.value;render();});
 
 /* copy */
 function copyText(t){
